@@ -1,7 +1,7 @@
 var express = require('express'),
 	app = express(),
 	twilio = require('twilio'),
-	twilioSessions = require('./')
+	twilioSessions = require('..')
 	bodyParser = require('body-parser');
 
 app.use(bodyParser());
@@ -15,8 +15,6 @@ app.post("/twilio",function(req,res,next) {
 	} else {
 		req.phone.messages.push(req.body.Body);
 	}
-
-	console.log(req.phone.messages);
 
 	var resp = new twilio.TwimlResponse();
 	resp.say('You said' + req.body.Body);
