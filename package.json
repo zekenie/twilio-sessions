@@ -1,23 +1,30 @@
 {
   "name": "twilio-session",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "A convenient, mongoose based 'session' system for Twilio requests",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
-  "license": "BSD-2-Clause",
+  "author": {
+    "name": "Zeke Nierenberg",
+    "email": "hampzan09@gmail.com",
+    "url": "http://zeke.io"
+  },
+  "license": "MIT",
   "dependencies": {
     "mongoose": "~3.8.10",
     "colors": "~0.6.2",
-    "mongoose-findorcreate": "~0.1.2",
-    "node-uuid": "~1.4.1"
+    "mongoose-findorcreate": "~0.1.2"
   },
   "devDependencies": {
     "mocha": "~1.18.2",
     "supertest": "~0.12.1",
     "express": "~4.3.0",
     "node-uuid": "~1.4.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zekenie/twilio-sessions"
+  },
 }
