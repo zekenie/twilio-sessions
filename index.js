@@ -35,7 +35,11 @@ module.exports = function(params) {
 			//after sending the response, save the state of the phone
 			res.on('finish',function() {
 				phone.markModified('store');
-				phone.save();
+				phone.save(function(err,phone) {
+					if(params.hasOwnProperty('onUpdate') && typeof params.onUpdate === "function") {
+						params.onUpdate(err,phone.store);
+					}
+				});
 			});
 
 			next();
